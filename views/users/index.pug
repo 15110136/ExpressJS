@@ -1,0 +1,11 @@
+h1 User
+a(href="/users/create", title="title") New User 
+form(action="/users/search", method="get")
+  input(type="text" name="q")
+  button(type="submit") Search
+ul
+  each user in users
+    li
+      span #{user.name}
+      span &nbsp;
+      a(href="/users/"+user.id) View
